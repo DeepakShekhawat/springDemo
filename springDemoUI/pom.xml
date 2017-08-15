@@ -23,6 +23,13 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		<!-- Linking Backend project -->
+		<dependency>
+			<groupId>home.spring</groupId>
+			<artifactId>springdemoServer</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- J2EE Dependency -->
 		<dependency>
 			<groupId>javax</groupId>

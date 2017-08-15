@@ -9,15 +9,16 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="${contextRoot}/home">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <li id="productLists" class="nav-item">
+                    <a class="nav-link" href="${contextRoot}/show/all/products">View Product</a>
+                </li>
                 <li id="about" class="nav-item">
                     <a class="nav-link" href="${contextRoot}/about">About</a>
-                </li>
-                <li id="productLists" class="nav-item">
-                    <a class="nav-link" href="${contextRoot}/productLists">View Product</a>
                 </li>
                 <li id="contact" class="nav-item">
                     <a class="nav-link" href="${contextRoot}/contact">Contact Us</a>
                 </li>
+                
             </ul>
         </div>
     </nav>
