@@ -11,7 +11,10 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:component-scan base-package="com.home.controller" />
-	<context:component-scan base-package="home.spring.springserver.daoimpl" />
+	<context:component-scan base-package="com.home.exception" />
+
+	<context:component-scan base-package="home.spring.shoppingserver" />
+		
 	<mvc:annotation-driven />
 
 	<bean id="jspViewResolver"

@@ -22,12 +22,16 @@
 
 <script>
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- loaded bootstrap-readable-theam css -->
 <link href="${css}/bootstrap-readable-theam.css" rel="stylesheet">
+
+<!-- loaded dataTables bootstrap -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -56,19 +60,35 @@
 				<%@ include file="contact.jsp"%>
 			</c:if>
 			
-			<!--Loading About jsp -->
+			<!--Loading products either All or by Category jsp -->
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts}">
 				<%@ include file="listProducts.jsp"%>
+			</c:if>
+			
+			<!--Loading About jsp -->
+			<c:if test="${userClickViewProduct == true}">
+				<%@ include file="viewProduct.jsp"%>
 			</c:if>
 		</div>
 		<!--Loading Footer -->
 		<%@ include file="./shared/footer.jsp"%>
 
 		<!-- Bootstrap core JavaScript -->
-		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/jquery.js"></script>
 		<script src="${js}/popper.min.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
-
+		<script src="${js}/jquery.min.js"></script>
+		
+		<!-- DataTable Bootstrap js -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- DataTable js -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		
+		
+		
+		
 		<!-- loaded custom build js file -->
 		<script src="${js}/myapp.js"></script>
 	</div>

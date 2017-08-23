@@ -1,4 +1,4 @@
-package home.spring.springdemoServer;
+package home.spring.shoppingserver;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
