@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.home.exception.ProductNotFoundException;
 @Controller
 public class PageController {
 	
@@ -81,9 +83,15 @@ public class PageController {
 	 * Method to show individual product
 	 */
 	@RequestMapping(value= {"show/{id}/product"})
-	public ModelAndView showUniqProduct(@PathVariable("id") int id){
+	public ModelAndView showUniqProduct(@PathVariable("id") int id) throws ProductNotFoundException{
 		Product product = null;
 		product=  productDAO.getProduct(id);
+		
+		if(product==null){
+			
+			throw new ProductNotFoundException();
+		}
+		
 		product.setViews(product.getViews() + 1);
 		productDAO.updateProduct(product);
 		
